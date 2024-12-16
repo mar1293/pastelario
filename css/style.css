@@ -15,6 +15,26 @@ header {
   text-align: center;
   padding: 1.5em 0;
   border-bottom: 5px solid #ffc0cb;
+  position: relative; /* Permite utilizar posicionamiento relativo */
+}
+
+header h1 {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente llamativa */
+  color: #ff69b4;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto en el header */
+  animation: bounce 2s infinite alternate; /* Animación para hacer el texto más dinámico */
+}
+
+/* Animación para el header */
+@keyframes bounce {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  100% { transform: translate(-50%, -50%) translateY(-15px); }
 }
 
 /* Navegación */
@@ -125,3 +145,4 @@ footer {
   color: #fff;
   font-size: 0.9em;
 }
+
