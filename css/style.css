@@ -3,71 +3,67 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fdf2e9; /* Fondo pastel */
+  background-color: #fdf2e9;
+  display: flex;
+  flex-direction: column; /* Alinea las secciones verticalmente */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
 }
 
 /* Header */
 header {
-  background-color: #ffd1dc; /* Rosa pastel */
+  background-color: #ffd1dc;
   text-align: center;
   padding: 1.5em 0;
-  border-bottom: 5px solid #ffc0cb; /* Detalle elegante */
+  border-bottom: 5px solid #ffc0cb;
 }
 
-/* Herencia aplicada: `h1` hereda las fuentes globales */
-h1 {
-  color: #ffffff;
-  font-size: 2.5em;
-  font-family: 'Georgia', serif; /* Sobrescribe la fuente global */
-}
-
-/* Menú de navegación */
+/* Navegación */
 nav {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #ffefeb; /* Fondo suave */
+  background-color: #ffefeb;
   padding: 1em 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Herencia aplicada a los links */
 nav a {
   text-decoration: none;
-  color: #ff7f50; /* Coral pastel */
+  color: #ff7f50;
   font-weight: bold;
-  font-size: 1.2em; /* Tamaño basado en `body` */
+  font-size: 1.2em;
   padding: 0.5em 1em;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Sobrescritura en estados hover y active */
 nav a:hover {
-  background-color: #ffdab9; /* Melocotón pastel */
+  background-color: #ffdab9;
   color: #fff;
 }
 
 nav a:active {
-  background-color: #ffc0cb; /* Rosa fuerte */
+  background-color: #ffc0cb;
 }
 
 /* Main (Recetas) */
 main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: wrap; /* Permite que las recetas se ajusten en filas */
+  justify-content: center; /* Centra las recetas horizontalmente */
   gap: 20px;
   padding: 20px;
+  flex: 1; /* Expande el área principal para llenar el espacio restante */
 }
 
-/* Estilo de las recetas */
+/* Recetas */
 .receta {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: space-between; /* Distribuye los elementos verticalmente */
   background-color: #fff;
-  border: 3px solid #ffd1dc; /* Rosa pastel */
+  border: 3px solid #ffd1dc;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -75,10 +71,9 @@ main {
   transition: transform 0.3s;
 }
 
-/* Herencia para el borde: cambia el color al pasar el mouse */
 .receta:hover {
   transform: translateY(-5px);
-  border-color: #ff99aa; /* Cambia el borde al pasar */
+  border-color: #ff99aa;
 }
 
 .receta img {
@@ -87,29 +82,26 @@ main {
   margin-bottom: 10px;
 }
 
-/* Herencia: `h2` conserva las propiedades globales de texto */
 h2 {
-  color: #ff69b4; /* Rosa fuerte */
-  font-family: 'Georgia', serif; /* Sobrescribe la fuente */
+  color: #ff69b4;
+  font-family: 'Georgia', serif;
   font-size: 1.8em;
   text-align: center;
   margin-bottom: 10px;
   transition: color 0.3s;
 }
 
-/* Cascada: color sobrescrito al pasar el mouse */
 h2:hover {
-  color: #ff4500; /* Naranja vibrante */
+  color: #ff4500;
   cursor: pointer;
 }
 
 h3 {
-  color: #ff7f50; /* Coral pastel */
+  color: #ff7f50;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-/* Listas de ingredientes y procedimiento */
 ul, ol {
   margin: 0;
   padding: 0;
@@ -124,6 +116,9 @@ ul li, ol li {
 
 /* Footer */
 footer {
+  display: flex; /* Flexbox en el footer */
+  justify-content: center;
+  align-items: center;
   background-color: #ffd1dc;
   text-align: center;
   padding: 1em;
