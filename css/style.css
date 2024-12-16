@@ -14,10 +14,11 @@ header {
   border-bottom: 5px solid #ffc0cb; /* Detalle elegante */
 }
 
+/* Herencia aplicada: `h1` hereda las fuentes globales */
 h1 {
   color: #ffffff;
   font-size: 2.5em;
-  font-family: 'Georgia', serif; /* Fuente llamativa */
+  font-family: 'Georgia', serif; /* Sobrescribe la fuente global */
 }
 
 /* Menú de navegación */
@@ -30,16 +31,18 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Herencia aplicada a los links */
 nav a {
   text-decoration: none;
   color: #ff7f50; /* Coral pastel */
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2em; /* Tamaño basado en `body` */
   padding: 0.5em 1em;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Sobrescritura en estados hover y active */
 nav a:hover {
   background-color: #ffdab9; /* Melocotón pastel */
   color: #fff;
@@ -72,8 +75,10 @@ main {
   transition: transform 0.3s;
 }
 
+/* Herencia para el borde: cambia el color al pasar el mouse */
 .receta:hover {
   transform: translateY(-5px);
+  border-color: #ff99aa; /* Cambia el borde al pasar */
 }
 
 .receta img {
@@ -82,15 +87,17 @@ main {
   margin-bottom: 10px;
 }
 
+/* Herencia: `h2` conserva las propiedades globales de texto */
 h2 {
   color: #ff69b4; /* Rosa fuerte */
-  font-family: 'Georgia', serif;
+  font-family: 'Georgia', serif; /* Sobrescribe la fuente */
   font-size: 1.8em;
   text-align: center;
   margin-bottom: 10px;
   transition: color 0.3s;
 }
 
+/* Cascada: color sobrescrito al pasar el mouse */
 h2:hover {
   color: #ff4500; /* Naranja vibrante */
   cursor: pointer;
@@ -115,11 +122,6 @@ ul li, ol li {
   font-size: 1em;
 }
 
-/* Detalles en las recetas */
-.receta:hover {
-  border-color: #ff99aa; /* Cambia el borde al pasar */
-}
-
 /* Footer */
 footer {
   background-color: #ffd1dc;
@@ -128,5 +130,3 @@ footer {
   color: #fff;
   font-size: 0.9em;
 }
-
-  
